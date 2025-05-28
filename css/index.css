@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .page {
@@ -12,6 +13,10 @@
     flex-direction: column;
     align-items: center;
 }
+
+/*
+    -- HEADER --
+*/
 
 .page__header {
     width: 95%;
@@ -79,4 +84,147 @@
     font-family: "Inter", sans-serif;
     font-size: 0.65rem;
     font-weight: 300;
+}
+
+/*
+    -- MAIN --
+*/
+
+.page__main {
+    height: 2395px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 0.8fr;
+}
+
+.main__container {
+    display: grid;
+    grid-template: 
+    "img title" 1fr
+    "img text" 1fr
+    /1fr 1fr;
+    gap: 2% 6%;
+}
+
+.container__main-img {
+    grid-area: img;
+    color: #ffffff;
+    justify-self: end;
+    align-self: center;
+}
+
+.container__subtitle {
+    grid-area: title;
+    color: #ffffff;
+    align-self: end;
+    justify-self: start;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.container__main-text {
+    grid-area: text;
+    color: #F9F9F9;
+    align-self: start;
+    justify-self: start;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    width: 80%;
+}
+
+.main__container-text {
+    display: grid;
+    grid-template: 
+    "text img" 1fr
+    "link img" 1fr
+    /1fr 1fr;
+    gap: 5% 6%;
+}
+
+.container-text__text {
+    grid-area: text;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: #F9F9F9;
+    width: 80%;
+    align-self: end;
+    justify-self: end;
+}
+
+.container-text__link {
+    grid-area: link;
+    align-self: start;
+    justify-self: end;
+    width: 80%;
+    height: 22%;
+}
+
+.link__text{
+    display: inline-flex;
+    border: 1px solid #167BF7;
+    background: #167BF7;
+    border-radius: 8px;
+    height: 100%;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+}
+
+.container-text__img {
+    grid-area: img;
+    align-self: center;
+    justify-self: start;
+}
+
+.main__container-screens {
+    display: grid;
+    grid-template: 
+    "tt tt tt" 1fr
+    "tv pc cel" 2fr
+    /1fr 1fr 1fr;
+    align-items: center;
+    
+}
+
+.container-screens__subtitle {
+    grid-area: tt;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    align-self: end;
+}
+
+.container-screens__tv {
+    grid-area: tv;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    justify-self: end;
+}
+
+.container-screens__pc {
+    grid-area: pc;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.container-screens__cel {
+    grid-area: cel;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    justify-self: start;
 }
