@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+li {
+    list-style-type: none;
+}
+
 .page {
     background-color: #00020E;
     background-image: url("/assets/images/background-img.svg");
@@ -227,4 +231,41 @@
     font-size: 2rem;
     font-weight: 700;
     justify-self: start;
+}
+
+/*
+    -- FOOTER --
+*/
+
+.page__footer {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer__logo {
+    margin-bottom: 1%;
+}
+
+.footer__list {
+    display: flex;
+    gap: 20px;
+}
+
+.list__link {
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.footer__text {
+    color: #C0C0C0;
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    width: 85%;
 }
