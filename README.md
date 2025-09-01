@@ -1,5 +1,5 @@
 # alura website
-Website Alura com HTML e CSS
+Website Alura with HTML and CSS
 
 ---
 
