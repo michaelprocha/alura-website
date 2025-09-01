@@ -1,0 +1,238 @@
+@use "settings" as set;
+
+%main-content {
+    max-width: set.px-to-rem(1160);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.combo {
+    max-width: set.px-to-rem(588);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1.5rem;
+
+    &__title {
+        @include set.title(set.$font-size-large);
+        text-align: center;
+        width: 95%;
+        
+        @include set.breakpoint(set.$device-tablet) {
+            @include set.title(set.$font-size-xlarge-notebook);
+
+        }
+    }
+
+    &__image {
+        width: set.px-to-rem(348);
+        @include set.breakpoint(set.$device-tablet) {
+            width: 60%;
+
+        }
+    }
+
+    &__nav {
+        padding-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__link {
+        
+        @include set.button(512);
+        @include set.text(set.$font-size-base);
+
+        @include set.breakpoint(set.$device-tablet) {
+            @include set.button(300);
+        }
+
+        &--transparent {
+            background-color: transparent;
+            border: solid 1px set.$title-color;
+        }
+    }
+
+    &__text {
+        @include set.text(set.$font-size-small, set.$text-detail-color);
+        text-align: center;
+        padding-top: set.px-to-rem(10);
+    }
+}
+
+.devices {
+    @extend %main-content;
+    @include set.breakpoint(set.$device-tablet) {
+        flex-direction: column;
+    }
+
+    &__image {
+        max-width: set.px-to-rem(498);
+        width: 50%;
+        @include set.breakpoint(set.$device-large-phone) {
+            width: 70%;
+        }
+    }
+
+    &__title {
+        @include set.title(set.$font-size-xxlarge);
+        padding-bottom: set.px-to-rem(8);
+        line-height: set.px-to-rem(45);
+        @include set.breakpoint(set.$device-notebook) {
+            @include set.title(set.$font-size-xxlarge-notebook);
+        }
+    }
+
+    &__text {
+        @include set.text(set.$font-size-base, set.$text-description-color);
+        max-width: set.px-to-rem(588);
+    }
+}
+
+.sobre-combo {
+    @extend %main-content;
+
+    @include set.breakpoint(set.$device-tablet) {
+        flex-direction: column-reverse;
+    }
+
+    &__image {
+        max-width: set.px-to-rem(496);
+        width: 50%;
+        padding-bottom: set.px-to-rem(25);
+        @include set.breakpoint(set.$device-large-phone) {
+            width: 70%;
+        }
+    }
+
+    &__text {
+        @include set.text(set.$font-size-base, set.$text-description-color);
+        max-width: set.px-to-rem(588);
+        padding-bottom: set.px-to-rem(16);
+    }
+
+    &__link {
+        @include set.button(162);
+        @include set.text(set.$font-size-base);
+    }
+}
+
+.download {
+    @extend %main-content;
+    @include set.breakpoint(set.$device-tablet) {
+        flex-direction: column;
+    }
+
+    &__image {
+        max-width: set.px-to-rem(547);
+        width: 50%;
+        padding-bottom: set.px-to-rem(25);
+
+        @include set.breakpoint(set.$device-large-phone) {
+            width: 70%;
+        }
+    }
+
+    &__title {
+        @include set.title(set.$font-size-xxlarge);
+        padding-bottom: set.px-to-rem(8);
+        line-height: set.px-to-rem(40);
+        @include set.breakpoint(set.$device-notebook) {
+            @include set.title(set.$font-size-xxlarge-notebook);
+        }
+    }
+
+    &__text {
+        @include set.text(set.$font-size-base, set.$text-description-color);
+        max-width: set.px-to-rem(588);
+    }
+}
+
+.devices-list {
+    max-width: set.px-to-rem(1154);
+    width: 100%;
+    padding-top: set.px-to-rem(150);
+
+    &__title {
+        @include set.title(set.$font-size-xxlarge);
+        text-align: center;
+        padding-bottom: set.px-to-rem(40);
+        line-height: set.px-to-rem(55);
+        @include set.breakpoint(set.$device-notebook) {
+            @include set.title(set.$font-size-xxlarge-notebook);
+        }
+        
+        @include set.breakpoint(set.$device-large-phone) {
+            @include set.title(set.$font-size-xlarge);
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include set.breakpoint(set.$device-large-phone) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__image {
+        max-width: set.px-to-rem(339);
+        width: 100%;
+    }
+
+    &__text {
+        @include set.title(set.$font-size-xlarge);
+        text-align: center;
+
+        @include set.breakpoint(set.$device-notebook) {
+            @include set.title(set.$font-size-xlarge-notebook);
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    max-width: set.px-to-rem(1160);
+
+    &__title {
+        @include set.flex-center;
+        padding-bottom: set.px-to-rem(40);
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: set.px-to-rem(24);
+    }
+
+    &__item {
+        @include set.text(set.$font-size-base);
+        padding: 0 set.px-to-rem(10);
+    }
+
+    &__text {
+        @include set.text(set.$font-size-small, set.$text-detail-color);
+        text-align: center;
+        padding-bottom: set.px-to-rem(100);
+
+        &:nth-child(3) {
+            padding-bottom: set.px-to-rem(15);
+        }
+    }
+}

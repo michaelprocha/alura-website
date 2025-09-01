@@ -1,0 +1,39 @@
+@use "settings" as set;
+
+body {
+    background-color: set.$background-color;
+}
+
+header {
+    height: set.px-to-rem(680);
+    background-image: url(../assets/images/background-img.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 set.px-to-rem(50);
+    @include set.flex-center;
+
+    @include set.breakpoint(set.$device-tablet) {
+        background-image: none;
+    }
+}
+
+header > div {
+    width: 100%;
+    max-width: set.px-to-rem(set.$header-area-spacing);
+
+    @include set.breakpoint(set.$device-tablet) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+main {
+    padding: set.px-to-rem(200) set.px-to-rem(50) set.px-to-rem(145) set.px-to-rem(50);
+    @include set.flex-center(9.3rem);
+    flex-direction: column;
+}
+
+footer {
+    padding: 0 set.px-to-rem(50);
+    @include set.flex-center;
+}

@@ -1,74 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Alura</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
-</head>
-<body class="page">
-    <header class="page__header">
-        <div class="header__container">
-            <h1 class="container__title">Com o Combo+, você pode aproveitar a Alura+ e o Alura Língua por um preço único.</h1>
-            <img class="container__img" src="assets/images/alura-oferta-img.svg" alt="Combo alura mais alura língua">
-            <nav class="container__links">
-                <a class="links__link" href="#">Assine por 12x de R$ 120,00*</a>
-                <a class="links__link-alura" href="#">Assinar somente o Alura+</a>
-            </nav>
-            <p class="container__text">*O preço pode variar caso a assinatura seja feita em outros planos.</p>
-        </div>
-    </header>
-    <main class="page__main">
-        <section class="main__container">
-            <img class="container__main-img" src="assets/images/plataformas-img.svg" alt="Imagen de plataformas para alura">
-            <h2 class="container__subtitle">Assista do seu jeito</h2>
-            <p class="container__main-text">Aproveite a tela grande da TV ou assista no tablet, laptop, celular e outros aparelhos. Nossa seleção de cursos não para de crescer.</p>        
-        </section>
-        <section class="main__container-text">
-            <p class="container-text__text">Só o Combo+ oferece Alura+ e Alura Língua juntos para você ter acesso a cursos de diversas áreas da tecnologia e aprender inglês ou espanhol, onde e como quiser.</p>
-            <div class="container-text__link">
-                <a class="link__text" href="#">Assine o Combo+</a>
-            </div>
-            <img class="container-text__img" src="assets/images/acesso-img.svg" alt="Imagen de plataforma alura e alura língua">
-        </section>
-        <section class="main__container">
-            <img class="container__main-img" src="assets/images/baixar-curso-img.png" alt="Imagen de baixar curso">
-            <h2 class="container__subtitle">Baixe seus cursos</h2>
-            <p class="container__main-text">Baixe e assista quando e onde quiser. Assim, seus favoritos estão sempre com você, até mesmo sem internet.</p>
-        </section>
-        <section class="main__container-screens">
-            <h2 class="container-screens__subtitle">Disponível nos seus dispositivos favoritos</h2>
-            <figure class="container-screens__tv">
-                <img src="assets/images/lista-tv-img.png" alt="tv">
-                <figcaption>TV</figcaption>
-            </figure>
-            <figure class="container-screens__pc">
-                <img src="assets/images/lista-computador-img.png" alt="computador">
-                <figcaption>Computadores</figcaption>
-            </figure>
-            <figure class="container-screens__cel">
-                <img src="assets/images/lista-celular-img.png" alt="celular">
-                <figcaption>Celulares e tablets</figcaption>
-            </figure>
-        </section>
-    </main>
-    <footer class="page__footer">
-        <img class="footer__logo" src="assets/images/logo-aluraplus-img.png" alt="Logo alura +">
-        <ul class="footer__list">
-            <li><a class="list__link" href="#">Idioma</a></li>
-            <li><a class="list__link" href="#">Dispositivos compatíveis</a></li>
-            <li><a class="list__link" href="#">Contrato de assinatura</a></li>
-            <li><a class="list__link" href="#">Politica de privacidade</a></li>
-            <li><a class="list__link" href="#">Proteção de dados no Brasil</a></li>
-            <li><a class="list__link" href="#">Anuncios personalizados</a></li>
-            <li><a class="list__link" href="#">Ajuda</a></li>
-        </ul>
-        <p class="footer__text">® 2021 Alura, Alura+ e Alura Língua. Todos os direitos reservados. Serviço de assinatura paga. Conteúdo sujeito a disponibilidade.</p>
-        <p class="footer__text">Alura+ é um serviço pago, baseado em assinatura e sujeito a termos e condições. O serviço Alura+ é comercializado por Aovs Sistemas de Informática S.A., Rua Vergueiro, 3185 - Liberdade, São Paulo - SP, 04101-300, Brasil e CNPJ 05.555.382/0001-33</p>
-    </footer>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Alura</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<header>
+			<div>
+				<div class="combo">
+					<h1 class="combo__title">Com o Combo+, você pode aproveitar a Alura+ e o Alura Língua por um preço único.</h1>
+					<img class="combo__image" src="/assets/images/alura-oferta-img.svg" alt="Combo+, alura+ com alura língua" />
+					<div>
+						<nav class="combo__nav">
+							<a class="combo__link" href="#">Assine por 12x de R$ 120,00*</a>
+							<a class="combo__link combo__link--transparent" href="#">Assinar somente o Alura+</a>
+						</nav>
+						<p class="combo__text">*O preço pode variar caso a assinatura seja feita em outros planos.</p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="devices">
+				<img class="devices__image" src="assets/images/plataformas-img.svg" aria-hidden="true" />
+				<div>
+					<h2 class="devices__title">Assista do seu jeito</h2>
+					<p class="devices__text">
+						Aproveite a tela grande da TV ou assista no tablet, laptop, celular e outros aparelhos. Nossa seleção de cursos não
+						para de crescer.
+					</p>
+				</div>
+			</section>
+			<section class="sobre-combo">
+				<div>
+					<p class="sobre-combo__text">
+						Só o Combo+ oferece Alura+ e Alura Língua juntos para você ter acesso a cursos de diversas áreas da tecnologia e
+						aprender inglês ou espanhol, onde e como quiser.
+					</p>
+					<a class="sobre-combo__link" href="#">Assine o Combo+</a>
+				</div>
+				<img class="sobre-combo__image" src="assets/images/acesso-img.svg" aria-hidden="true" />
+			</section>
+			<section class="download">
+				<img class="download__image" src="assets/images/baixar-curso-img.png" aria-hidden="true" />
+				<div>
+					<h2 class="download__title">Baixe seus cursos</h2>
+					<p class="download__text">Baixe e assista quando e onde quiser. Assim, seus favoritos estão sempre com você, até mesmo sem internet.</p>
+				</div>
+			</section>
+			<section class="devices-list">
+				<h2 class="devices-list__title">Disponível nos seus dispositivos favoritos</h2>
+				<ul class="devices-list__list">
+					<li class="devices-list__item">
+						<img class="devices-list__image" src="assets/images/lista-tv-img.png" aria-hidden="true" />
+						<p class="devices-list__text">TV</p>
+					</li>
+					<li class="devices-list__item">
+						<img class="devices-list__image" src="assets/images/lista-computador-img.png" aria-hidden="true" />
+						<p class="devices-list__text">Computadores</p>
+					</li>
+					<li class="devices-list__item">
+						<img class="devices-list__image" src="assets/images/lista-celular-img.png" aria-hidden="true" />
+						<p class="devices-list__text">Celulares e tablets</p>
+					</li>
+				</ul>
+			</section>
+		</main>
+		<footer>
+			<div class="footer">
+				<h3 class="footer__title"><img src="assets/images/logo-aluraplus-img.png" alt="Alura+" /></h3>
+				<ul class="footer__list">
+					<li class="footer__item">Idioma</li>
+					<li class="footer__item">Dispositivos compatíveis</li>
+					<li class="footer__item">Contrato de assinatura</li>
+					<li class="footer__item">Politica de privacidade</li>
+					<li class="footer__item">Proteção de dados no Brasil</li>
+					<li class="footer__item">Anuncios personalizados</li>
+					<li class="footer__item">Ajuda</li>
+				</ul>
+				<p class="footer__text">
+					® 2021 Alura, Alura+ e Alura Língua. Todos os direitos reservados. Serviço de assinatura paga. Conteúdo sujeito a
+					disponibilidade.
+				</p>
+				<p class="footer__text">
+					Alura+ é um serviço pago, baseado em assinatura e sujeito a termos e condições. O serviço Alura+ é comercializado por
+					Aovs Sistemas de Informática S.A., Rua Vergueiro, 3185 - Liberdade, São Paulo - SP, 04101-300, Brasil e CNPJ
+					05.555.382/0001-33
+				</p>
+			</div>
+		</footer>
+	</body>
 </html>

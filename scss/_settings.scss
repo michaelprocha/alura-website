@@ -1,0 +1,88 @@
+// fonts
+$font-primary: "inter", sans-serif;
+
+// font sizes
+$font-size-small: 14;
+$font-size-base: 16;
+$font-size-large: 28;
+$font-size-xlarge: 32;
+$font-size-xxlarge: 48;
+
+//font sizes notebook
+$font-size-xlarge-notebook: 22;
+$font-size-xxlarge-notebook: 38;
+
+
+// font weights
+$font-weight-base: 400;
+$font-weight-bold: 700;
+
+//colors
+$background-color: #00030c;
+$button-color: #167bf7;
+$title-color: #ffffff;
+$text-detail-color: #c0c0c0;
+$text-description-color: #f9f9f9;
+
+//spacing
+$header-area-spacing: 1332;
+$main-area-spacing: 1200;
+$main-section-area-spacing: 150;
+
+//breakpoints
+$device-notebook: 1080px;
+$device-tablet: 840px;
+$device-large-phone: 620px;
+
+//functions
+@function px-to-rem($px) {
+    @return ($px / 16) * 1rem;
+}
+
+//placeholders
+@mixin flex-center($gap: 0rem) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+}
+
+@mixin title($font-size: px-to-rem(48)) {
+    font-family: $font-primary;
+    font-weight: $font-weight-bold;
+    font-size: px-to-rem($font-size);
+    color: $title-color;
+}
+
+@mixin text($font-size: px-to-rem(16), $color: $title-color) {
+    font-family: $font-primary;
+    font-weight: $font-weight-base;
+    font-size: px-to-rem($font-size);
+    color: $color;
+}
+
+@mixin button($width: px-to-rem(100), $color: $button-color) {
+    background-color: $color;
+    width: px-to-rem($width);
+    height: px-to-rem(56);
+    border-radius: 8px;
+    @include flex-center;
+}
+
+@mixin breakpoint($size) {
+    @if $size == $device-notebook {
+        @media only screen and (max-width: $device-notebook) {
+            @content;
+        }
+    }
+    @else if $size == $device-tablet{
+        @media only screen and (max-width: $device-tablet) {
+            @content;
+        }
+    }
+    @else if $size == $device-large-phone{
+        @media only screen and (max-width: $device-large-phone) {
+            @content;
+        }
+    }
+}
